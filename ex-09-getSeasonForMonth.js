@@ -11,21 +11,18 @@
 // It should also return false if the function is given
 // bad input.
 
-var winter = 'winter';
-var summer = 'summer';
-var fall = 'fall';
-var spring = 'spring';
-
-var getSeasonForMonth = function(someNumber){
-  if ( someNumber === 1 || 12 ){
-    return winter;
-  } else if ( someNumber === 3 || 5 ){
-      return spring;
-    } else if ( someNumber === 7 ){
-        return summer;
-      } else if ( someNumber === 9 ){
-        return fall;
-      }
+var getSeasonForMonth = function(monthNumber){
+  if ( monthNumber === 1 || monthNumber === 2 || monthNumber === 12 ){
+    return 'winter';
+  } else if ( monthNumber === 3 || monthNumber === 4 || monthNumber === 5 ){
+      return 'spring';
+  } else if ( monthNumber === 6 || monthNumber === 7 || monthNumber === 8 ){
+      return 'summer';
+  } else if ( monthNumber === 9 || monthNumber === 10 || monthNumber === 11 ){
+      return 'fall';
+  } else {
+    return false;
+  }
 }
 
 //*-*~*~*~*~*~ Don't Touch *~*~*~*~*~*~*~*

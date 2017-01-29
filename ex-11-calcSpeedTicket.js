@@ -23,8 +23,14 @@
 
 
 
-var calcSpeedTicket = function(){
-
+var calcSpeedTicket = function(speedLimit, clockedSpeed, zoneVal){
+  if (clockedSpeed <= speedLimit + 5) {
+    return 0;
+  } else if (clockedSpeed < speedLimit + 20) {
+    return 150;
+  } else if (clockedSpeed >= speedLimit + 20) {
+    return 250;
+  }
 }
 
 //*-*~*~*~*~*~ Don't Touch *~*~*~*~*~*~*~*
